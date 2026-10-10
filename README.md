@@ -68,3 +68,11 @@ The panel configuration setup is documented below:
 1. **Network Layer Hardening:** Implement explicit perimeter firewall rules to block direct SSH exposure to untrusted external subnets. Force all administrative SSH access through an isolated VPN or Bastion host architecture.
 2. **Identity & Access Management (IAM):** Enforce strict strong-password complexity requirements across local accounts to mitigate basic dictionary guessing attacks. Implement Multi-Factor Authentication (MFA) for all system-level shell entry points.
 3. **Automated Defensive Orchestration:** Deploy an automated Host Intrusion Prevention system such as `Fail2ban` to parse `/var/log/auth.log` dynamically, automatically invoking ephemeral kernel drops via `iptables` after 5 sequential failure flags are triggered.
+
+
+# Enterprise Operational Methodology
+Every project housed in this repository undergoes standard SOC pipeline validation:
+1. **Telemetry Ingestion:** Ensuring appropriate agent collection hooks or network daemon inputs are clean and structured.
+2. **Analysis & Logic Definition:** Building fine-tuned search indices or custom signatures to isolate noise from true system compromise.
+3. **Containment & Eradication:** Utilizing localized firewalls or EDR automation integrations to systematically achieve network boundary security.
+4. **Continuous Post-Mortem:** Documenting strategic architectural changes to continuously minimize the target host attack surface.
